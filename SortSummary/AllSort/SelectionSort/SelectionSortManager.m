@@ -13,7 +13,7 @@
 + (void)startSelectionSortWithDataArray:(NSArray *)array{
     NSMutableArray *mutableArray = [array mutableCopy];
 
-     NSLog(@"排序前：%@",[mutableArray formatOutPut]);
+//    NSLog(@"排序前：%@",[mutableArray formatOutPut]);
     
     //比较次数
     NSInteger checkCount = 0;
@@ -34,9 +34,9 @@
         }
     }
     
-    NSLog(@"排序后：%@",[mutableArray formatOutPut]);
+    //NSLog(@"排序后：%@",[mutableArray formatOutPut]);
     
-    NSLog(@"本次排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
+    NSLog(@"选择排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
     
 }
 

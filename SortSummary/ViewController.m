@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "BubbleSortManager.h"
 #import "SelectionSortManager.h"
+#import "InsertionSortManager.h"
+
 
 @interface ViewController ()
 
@@ -24,8 +26,10 @@
     [BubbleSortManager startBubbleSortWithDataArray:sourceArr];
     
     //选择排序
-    //[SelectionSortManager startSelectionSortWithDataArray:sourceArr];
+    [SelectionSortManager startSelectionSortWithDataArray:sourceArr];
     
+    //选择排序
+    [InsertionSortManager startSelectionSortWithDataArray:sourceArr];
 }
 
 
