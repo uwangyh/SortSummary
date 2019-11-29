@@ -11,9 +11,9 @@
 @implementation SelectionSortManager
 
 + (void)startSelectionSortWithDataArray:(NSArray *)array{
-    NSMutableArray *mutableArray = [array mutableCopy];
+    NSMutableArray *arr = [array mutableCopy];
 
-//    NSLog(@"排序前：%@",[mutableArray formatOutPut]);
+//    NSLog(@"排序前：%@",[arr formatOutPut]);
     
     //比较次数
     NSInteger checkCount = 0;
@@ -24,17 +24,17 @@
         NSInteger minIndex = i;
         for (NSInteger j = i+1; j < array.count; j++) {
             checkCount++;
-            if ([mutableArray[j]integerValue] < [mutableArray[minIndex]integerValue]) {
+            if ([arr[j]integerValue] < [arr[minIndex]integerValue]) {
                 minIndex = j;
             }
         }
         if (minIndex != i) {
-            [mutableArray exchangeObjectAtIndex:i withObjectAtIndex:minIndex];
+            [arr exchangeObjectAtIndex:i withObjectAtIndex:minIndex];
             exchangeCount++;
         }
     }
     
-    //NSLog(@"排序后：%@",[mutableArray formatOutPut]);
+    //NSLog(@"排序后：%@",[arr formatOutPut]);
     
     NSLog(@"选择排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
     

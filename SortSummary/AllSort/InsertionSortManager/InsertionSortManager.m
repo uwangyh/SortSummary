@@ -10,41 +10,39 @@
 
 @implementation InsertionSortManager
 
-+ (void)startSelectionSortWithDataArray:(NSArray *)array{
++ (void)startInsertionSortWithDataArray:(NSArray *)array{
     
-    NSMutableArray *mutableArray = [array mutableCopy];
+    NSMutableArray *arr = [array mutableCopy];
 
-    //NSLog(@"排序前：%@",[mutableArray formatOutPut]);
+    //NSLog(@"排序前：%@",[arr formatOutPut]);
     
     //比较次数
-    NSInteger checkCount = 0;
+    int checkCount = 0;
     //交换次数
-    NSInteger exchangeCount = 0;
-    
-    for (NSInteger i = 1; i < array.count; i++) {
-        for (NSInteger j = i; j > 0 ; j--) {
+    int exchangeCount = 0;
+
+    for (int i = 1; i < arr.count; i++) {
+        for (int j = i; j > 0 ; j--) {
             
             checkCount++;
             //NSLog(@"比较索引为%ld的值“%@”和索引为%ld的值“%@”",j,mutableArray[j],j-1,mutableArray[j-1]);
-            if ([mutableArray[j]integerValue] < [mutableArray[j-1]integerValue]) {
+            if ([arr[j] intValue] < [arr[j-1] intValue]) {
                 
-                [mutableArray exchangeObjectAtIndex:j withObjectAtIndex:j-1];
+                [arr exchangeObjectAtIndex:j withObjectAtIndex:j-1];
 
                 //NSLog(@"%@>%@成立，进行交换",mutableArray[j],mutableArray[j-1]);
                 exchangeCount++;
-    
+
                 //NSLog(@"排序中：%@\n",[mutableArray formatOutPut]);
             }else{
-                //NSLog(@"%@>%@不成立，本次不交换\n",mutableArray[j],mutableArray[j-1]);
+                NSLog(@"%@>%@不成立，本次不交换，本趟排序结束\n",arr[j],arr[j-1]);
                 break;
             }
-            
         }
     }
     
-    
-    //NSLog(@"排序后：%@",[mutableArray formatOutPut]);
-    NSLog(@"插入排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
+    //NSLog(@"排序后：%@",[arr formatOutPut]);
+    NSLog(@"插入排序结束，一共比较%d次，共进行%d次交换",checkCount,exchangeCount);
     
 }
 

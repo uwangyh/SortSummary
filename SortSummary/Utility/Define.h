@@ -11,5 +11,11 @@
 
 #import "NSArray+FormatArray.h"
 
+#import "BubbleSortManager.h"
+#import "SelectionSortManager.h"
+#import "InsertionSortManager.h"
+
+#import "QucikSortManager.h"
+
 
 #endif /* Define_h */

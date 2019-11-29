@@ -14,9 +14,9 @@
 
 + (void)startBubbleSortWithDataArray:(NSArray *)array{
     
-    NSMutableArray *mutableArray = [array mutableCopy];
+    NSMutableArray *arr = [array mutableCopy];
 
-    //NSLog(@"排序前：%@",[mutableArray formatOutPut]);
+    //NSLog(@"排序前：%@",[arr formatOutPut]);
 
     //交换次数
     NSInteger exchangeCount = 0;
@@ -24,14 +24,14 @@
     NSInteger checkCount = 0;
     //标记有没有发生交换，如果没有发生则表示数组已经有序，退出排序
     BOOL haveChange = false;
-    for (NSInteger i = 0; i < array.count; i++) {
+    for (NSInteger i = 0; i < arr.count; i++) {
         haveChange = false;
         for (NSInteger j = 0; j < array.count - 1 - i; j++) {
 
             //NSLog(@"比较索引为%ld的值“%@”和索引为%ld的值“%@”",j,mutableArray[j],j+1,mutableArray[j+1]);
-            if ([mutableArray[j] integerValue] > [mutableArray[j+1] integerValue]) {
+            if ([arr[j] integerValue] > [arr[j+1] integerValue]) {
                 
-                [mutableArray exchangeObjectAtIndex:j withObjectAtIndex:j+1];
+                [arr exchangeObjectAtIndex:j withObjectAtIndex:j+1];
                 
                 //NSLog(@"%@>%@成立，进行交换",mutableArray[j],mutableArray[j+1]);
                 exchangeCount++;
@@ -55,7 +55,7 @@
         }
     }
 
-    //NSLog(@"排序后：%@",[mutableArray formatOutPut]);
+    //NSLog(@"排序后：%@",[arr formatOutPut]);
     
     NSLog(@"冒泡排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
 }

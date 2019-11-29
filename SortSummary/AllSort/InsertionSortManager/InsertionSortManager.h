@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface InsertionSortManager : NSObject
 
-+ (void)startSelectionSortWithDataArray:(NSArray *)array;
++ (void)startInsertionSortWithDataArray:(NSArray *)array;
 
 @end
 

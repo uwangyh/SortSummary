@@ -7,10 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "BubbleSortManager.h"
-#import "SelectionSortManager.h"
-#import "InsertionSortManager.h"
-
 
 @interface ViewController ()
 
@@ -23,13 +19,17 @@
     NSArray *sourceArr = @[@8,@3,@5,@10,@1,@6,@4,@2,@7,@9];
  
     //冒泡排序
-    [BubbleSortManager startBubbleSortWithDataArray:sourceArr];
+    //[BubbleSortManager startBubbleSortWithDataArray:sourceArr];
     
     //选择排序
-    [SelectionSortManager startSelectionSortWithDataArray:sourceArr];
+    //[SelectionSortManager startSelectionSortWithDataArray:sourceArr];
     
     //选择排序
-    [InsertionSortManager startSelectionSortWithDataArray:sourceArr];
+    //[InsertionSortManager startInsertionSortWithDataArray:sourceArr];
+    
+    //快速排序
+    [QucikSortManager qucickSort:[sourceArr mutableCopy] low:0 high:sourceArr.count-1];
+    
 }
 
 
