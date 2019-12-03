@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)startQucikSortWithDataArray:(NSArray *)array;
 + (void)qucickSort:(NSMutableArray *)m low:(int)low high:(int)high;
-
++ (void)sort:(NSArray *)array left:(int)left right:(int)right;
 @end
 
 NS_ASSUME_NONNULL_END

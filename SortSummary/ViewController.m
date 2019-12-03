@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSArray *sourceArr = @[@8,@3,@5,@10,@1,@6,@4,@2,@7,@9];
- 
+
     //冒泡排序
     //[BubbleSortManager startBubbleSortWithDataArray:sourceArr];
     
@@ -27,8 +27,13 @@
     //选择排序
     //[InsertionSortManager startInsertionSortWithDataArray:sourceArr];
     
+    
+    //NSArray *sourceArr = @[@8,@1,@1];
+    
     //快速排序
-    [QucikSortManager qucickSort:[sourceArr mutableCopy] low:0 high:sourceArr.count-1];
+    [QucikSortManager sort:[sourceArr mutableCopy] left:0 right:sourceArr.count-1];
+    NSLog(@"#############");
+    //[QucikSortManager qucickSort:[sourceArr mutableCopy] low:0 high:sourceArr.count-1];
     
 }
 
