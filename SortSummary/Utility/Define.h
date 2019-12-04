@@ -15,7 +15,22 @@
 #import "SelectionSortManager.h"
 #import "InsertionSortManager.h"
 
-#import "QucikSortManager.h"
+#import "QuickSortManager.h"
 
+//
+#if 0
+#   define HHLog(fmt, ...) {NSLog((fmt),##__VA_ARGS__);}
+/*
+#   define HHLog(fmt, ...) {NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);}
+
+#   define HHLog(fmt, ...) NSLog((@"%s," "[lineNum:%d]" fmt) , __FUNCTION__, __LINE__, ##__VA_ARGS__); //带函数名和行数
+
+#   define hhLog(fmt, ...) NSLog((@"===[lineNum:%d]" fmt), __LINE__, ##__VA_ARGS__);  //带行数
+
+#   define hhLog(fmt, ...) NSLog((fmt), ##__VA_ARGS__); //不带函数名和行数
+ */
+#else
+#   define HHLog(...)
+#endif
 
 #endif /* Define_h */

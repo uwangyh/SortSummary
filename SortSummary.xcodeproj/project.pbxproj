@@ -19,7 +19,8 @@
 		480D3CD1238F970E00A8E97B /* BubbleSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 480D3CD0238F970E00A8E97B /* BubbleSortManager.m */; };
 		480D3CD5238FB90800A8E97B /* SelectionSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 480D3CD4238FB90800A8E97B /* SelectionSortManager.m */; };
 		480D3CDF238FCB4600A8E97B /* NSArray+FormatArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 480D3CDE238FCB4600A8E97B /* NSArray+FormatArray.m */; };
-		480D3CE32390BC4B00A8E97B /* QucikSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 480D3CE22390BC4B00A8E97B /* QucikSortManager.m */; };
+		48C63002239742F80063E900 /* QuickSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48C63001239742F80063E900 /* QuickSort.gif */; };
+		48C6300423978D220063E900 /* QucikSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6300323978D220063E900 /* QucikSortManager.m */; };
 		5CB4B53223901671005C0811 /* InsertionSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4B53123901671005C0811 /* InsertionSortManager.m */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +68,9 @@
 		480D3CD9238FCA9700A8E97B /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		480D3CDD238FCB4600A8E97B /* NSArray+FormatArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+FormatArray.h"; sourceTree = "<group>"; };
 		480D3CDE238FCB4600A8E97B /* NSArray+FormatArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FormatArray.m"; sourceTree = "<group>"; };
-		480D3CE12390BC4B00A8E97B /* QucikSortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QucikSortManager.h; sourceTree = "<group>"; };
-		480D3CE22390BC4B00A8E97B /* QucikSortManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QucikSortManager.m; sourceTree = "<group>"; };
+		480D3CE12390BC4B00A8E97B /* QuickSortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickSortManager.h; sourceTree = "<group>"; };
+		48C63001239742F80063E900 /* QuickSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = QuickSort.gif; sourceTree = "<group>"; };
+		48C6300323978D220063E900 /* QucikSortManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QucikSortManager.m; sourceTree = "<group>"; };
 		5CB4B53023901671005C0811 /* InsertionSortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsertionSortManager.h; sourceTree = "<group>"; };
 		5CB4B53123901671005C0811 /* InsertionSortManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsertionSortManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,8 +190,8 @@
 		480D3CD6238FC9FA00A8E97B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				480D3CD8238FCA3C00A8E97B /* PrefixHeader.pch */,
 				480D3CD9238FCA9700A8E97B /* Define.h */,
+				480D3CD8238FCA3C00A8E97B /* PrefixHeader.pch */,
 				480D3CDD238FCB4600A8E97B /* NSArray+FormatArray.h */,
 				480D3CDE238FCB4600A8E97B /* NSArray+FormatArray.m */,
 			);
@@ -199,8 +201,9 @@
 		480D3CE02390BC2D00A8E97B /* QuickSort */ = {
 			isa = PBXGroup;
 			children = (
-				480D3CE12390BC4B00A8E97B /* QucikSortManager.h */,
-				480D3CE22390BC4B00A8E97B /* QucikSortManager.m */,
+				480D3CE12390BC4B00A8E97B /* QuickSortManager.h */,
+				48C6300323978D220063E900 /* QucikSortManager.m */,
+				48C63001239742F80063E900 /* QuickSort.gif */,
 			);
 			path = QuickSort;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			files = (
 				480D3CA5238F965800A8E97B /* LaunchScreen.storyboard in Resources */,
 				480D3CA2238F965800A8E97B /* Assets.xcassets in Resources */,
+				48C63002239742F80063E900 /* QuickSort.gif in Resources */,
 				480D3CA0238F965600A8E97B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,10 +351,10 @@
 				480D3CD5238FB90800A8E97B /* SelectionSortManager.m in Sources */,
 				480D3C9D238F965600A8E97B /* ViewController.m in Sources */,
 				480D3C97238F965600A8E97B /* AppDelegate.m in Sources */,
+				48C6300423978D220063E900 /* QucikSortManager.m in Sources */,
 				480D3CA8238F965800A8E97B /* main.m in Sources */,
 				480D3CD1238F970E00A8E97B /* BubbleSortManager.m in Sources */,
 				480D3C9A238F965600A8E97B /* SceneDelegate.m in Sources */,
-				480D3CE32390BC4B00A8E97B /* QucikSortManager.m in Sources */,
 				480D3CDF238FCB4600A8E97B /* NSArray+FormatArray.m in Sources */,
 				5CB4B53223901671005C0811 /* InsertionSortManager.m in Sources */,
 			);

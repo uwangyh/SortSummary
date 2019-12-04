@@ -12,11 +12,11 @@
 
 @implementation BubbleSortManager
 
-+ (void)startBubbleSortWithDataArray:(NSArray *)array{
++ (void)startBubbleSortWithDataArray:(NSArray *)array block:(void(^)(NSString *))block{
     
     NSMutableArray *arr = [array mutableCopy];
 
-    //NSLog(@"排序前：%@",[arr formatOutPut]);
+    //HHLog(@"排序前：%@",[arr formatOutPut]);
 
     //交换次数
     NSInteger exchangeCount = 0;
@@ -28,25 +28,25 @@
         haveChange = false;
         for (NSInteger j = 0; j < array.count - 1 - i; j++) {
 
-            //NSLog(@"比较索引为%ld的值“%@”和索引为%ld的值“%@”",j,mutableArray[j],j+1,mutableArray[j+1]);
+            //HHLog(@"比较索引为%ld的值“%@”和索引为%ld的值“%@”",j,mutableArray[j],j+1,mutableArray[j+1]);
             if ([arr[j] integerValue] > [arr[j+1] integerValue]) {
                 
                 [arr exchangeObjectAtIndex:j withObjectAtIndex:j+1];
                 
-                //NSLog(@"%@>%@成立，进行交换",mutableArray[j],mutableArray[j+1]);
+                //HHLog(@"%@>%@成立，进行交换",mutableArray[j],mutableArray[j+1]);
                 exchangeCount++;
     
-                //NSLog(@"排序中：%@\n",[mutableArray formatOutPut]);
+                //HHLog(@"排序中：%@\n",[mutableArray formatOutPut]);
                 haveChange = true;
             }else{
-                //NSLog(@"%@>%@不成立，本次不交换\n",mutableArray[j],mutableArray[j+1]);
+                //HHLog(@"%@>%@不成立，本次不交换\n",mutableArray[j],mutableArray[j+1]);
             }
             checkCount++;
             if (j == array.count - 2 - i) {
                 if (haveChange) {
-                    //NSLog(@"----------本趟结束，最大的数值已放在数组最后-------\n");
+                    //HHLog(@"----------本趟结束，最大的数值已放在数组最后-------\n");
                 }else{
-                    //NSLog(@"----------***********本趟结束，且本趟没有进行交换，数组已经有序，退出排序***********-------\n\n");
+                    //HHLog(@"----------***********本趟结束，且本趟没有进行交换，数组已经有序，退出排序***********-------\n\n");
                 }
             }
         }
@@ -55,9 +55,9 @@
         }
     }
 
-    //NSLog(@"排序后：%@",[arr formatOutPut]);
-    
-    NSLog(@"冒泡排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
+    //HHLog(@"排序后：%@",[arr formatOutPut]);
+    //HHLog(@"冒泡排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
+    block([NSString stringWithFormat:@"冒泡排序结束:%@，共比较%ld次，共进行%ld次交换",[arr formatOutPut],checkCount,exchangeCount]);
 }
 
 @end

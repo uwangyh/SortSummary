@@ -16,24 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *sourceArr = @[@8,@3,@5,@10,@1,@6,@4,@2,@7,@9];
-
+    //NSArray *sourceArr = @[@8,@3,@5,@10,@1,@6,@4,@2,@7,@9];
+    NSArray *sourceArr = @[@9,@3,@5,@10,@1,@6,@4,@2,@7,@8];
+    //NSArray *sourceArr = @[@7,@6,@5];
+    //NSArray *sourceArr = @[@6,@2,@3,@4,@5];
+    
     //冒泡排序
-    //[BubbleSortManager startBubbleSortWithDataArray:sourceArr];
+    [BubbleSortManager startBubbleSortWithDataArray:sourceArr block:^(NSString *sortReslut) {
+        NSLog(@"%@",sortReslut);
+    }];
     
     //选择排序
-    //[SelectionSortManager startSelectionSortWithDataArray:sourceArr];
+    [SelectionSortManager startSelectionSortWithDataArray:sourceArr block:^(NSString *sortReslut) {
+        NSLog(@"%@",sortReslut);
+    }];
     
-    //选择排序
-    //[InsertionSortManager startInsertionSortWithDataArray:sourceArr];
-    
-    
-    //NSArray *sourceArr = @[@8,@1,@1];
+    //插入排序
+    [InsertionSortManager startInsertionSortWithDataArray:sourceArr block:^(NSString *sortReslut) {
+        NSLog(@"%@",sortReslut);
+    }];
     
     //快速排序
-    [QucikSortManager sort:[sourceArr mutableCopy] left:0 right:sourceArr.count-1];
-    NSLog(@"#############");
-    //[QucikSortManager qucickSort:[sourceArr mutableCopy] low:0 high:sourceArr.count-1];
+    [[QuickSortManager shareInstance]startQucikSortWithDataArray:sourceArr pivotIndex:LeftEle block:^(NSString *sortReslut) {
+        NSLog(@"%@",sortReslut);
+    }];
     
 }
 

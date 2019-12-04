@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BubbleSortManager : NSObject
 
 
-+ (void)startBubbleSortWithDataArray:(NSArray *)array;
++ (void)startBubbleSortWithDataArray:(NSArray *)array block:(void(^)(NSString *))block; 
 
 @end
 

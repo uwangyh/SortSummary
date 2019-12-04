@@ -10,10 +10,10 @@
 
 @implementation SelectionSortManager
 
-+ (void)startSelectionSortWithDataArray:(NSArray *)array{
++ (void)startSelectionSortWithDataArray:(NSArray *)array block:(void(^)(NSString *))block{
     NSMutableArray *arr = [array mutableCopy];
 
-//    NSLog(@"排序前：%@",[arr formatOutPut]);
+//    HHLog(@"排序前：%@",[arr formatOutPut]);
     
     //比较次数
     NSInteger checkCount = 0;
@@ -34,10 +34,10 @@
         }
     }
     
-    //NSLog(@"排序后：%@",[arr formatOutPut]);
+    //HHLog(@"排序后：%@",[arr formatOutPut]);
+    //HHLog(@"选择排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
     
-    NSLog(@"选择排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
-    
+    block([NSString stringWithFormat:@"选择排序结束:%@，共比较%ld次，共进行%ld次交换",[arr formatOutPut],checkCount,exchangeCount]);
 }
 
 @end

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SelectionSortManager : NSObject
 
-+ (void)startSelectionSortWithDataArray:(NSArray *)array;
++ (void)startSelectionSortWithDataArray:(NSArray *)array block:(void(^)(NSString *))block;
 
 @end
 
