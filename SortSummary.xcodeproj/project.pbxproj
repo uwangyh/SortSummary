@@ -20,7 +20,7 @@
 		480D3CD5238FB90800A8E97B /* SelectionSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 480D3CD4238FB90800A8E97B /* SelectionSortManager.m */; };
 		480D3CDF238FCB4600A8E97B /* NSArray+FormatArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 480D3CDE238FCB4600A8E97B /* NSArray+FormatArray.m */; };
 		48C63002239742F80063E900 /* QuickSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48C63001239742F80063E900 /* QuickSort.gif */; };
-		48C6300423978D220063E900 /* QucikSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6300323978D220063E900 /* QucikSortManager.m */; };
+		48C6300423978D220063E900 /* QuickSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6300323978D220063E900 /* QuickSortManager.m */; };
 		5CB4B53223901671005C0811 /* InsertionSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4B53123901671005C0811 /* InsertionSortManager.m */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +70,7 @@
 		480D3CDE238FCB4600A8E97B /* NSArray+FormatArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FormatArray.m"; sourceTree = "<group>"; };
 		480D3CE12390BC4B00A8E97B /* QuickSortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickSortManager.h; sourceTree = "<group>"; };
 		48C63001239742F80063E900 /* QuickSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = QuickSort.gif; sourceTree = "<group>"; };
-		48C6300323978D220063E900 /* QucikSortManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QucikSortManager.m; sourceTree = "<group>"; };
+		48C6300323978D220063E900 /* QuickSortManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickSortManager.m; sourceTree = "<group>"; };
 		5CB4B53023901671005C0811 /* InsertionSortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsertionSortManager.h; sourceTree = "<group>"; };
 		5CB4B53123901671005C0811 /* InsertionSortManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsertionSortManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				480D3CE12390BC4B00A8E97B /* QuickSortManager.h */,
-				48C6300323978D220063E900 /* QucikSortManager.m */,
+				48C6300323978D220063E900 /* QuickSortManager.m */,
 				48C63001239742F80063E900 /* QuickSort.gif */,
 			);
 			path = QuickSort;
@@ -351,7 +351,7 @@
 				480D3CD5238FB90800A8E97B /* SelectionSortManager.m in Sources */,
 				480D3C9D238F965600A8E97B /* ViewController.m in Sources */,
 				480D3C97238F965600A8E97B /* AppDelegate.m in Sources */,
-				48C6300423978D220063E900 /* QucikSortManager.m in Sources */,
+				48C6300423978D220063E900 /* QuickSortManager.m in Sources */,
 				480D3CA8238F965800A8E97B /* main.m in Sources */,
 				480D3CD1238F970E00A8E97B /* BubbleSortManager.m in Sources */,
 				480D3C9A238F965600A8E97B /* SceneDelegate.m in Sources */,

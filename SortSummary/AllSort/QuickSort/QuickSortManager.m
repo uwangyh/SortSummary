@@ -1,5 +1,5 @@
 //
-//  QucikSortManager.m
+//  QuickSortManager.m
 //  SortSummary
 //
 //  Created by WangYonghe on 2019/11/29.

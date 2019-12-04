@@ -1,5 +1,5 @@
 //
-//  QucikSortManager.h
+//  QuickSortManager.h
 //  SortSummary
 //
 //  Created by WangYonghe on 2019/11/29.
