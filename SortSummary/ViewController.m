@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -16,11 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //NSArray *sourceArr = @[@8,@3,@5,@10,@1,@6,@4,@2,@7,@9];
-    NSArray *sourceArr = @[@9,@3,@5,@10,@1,@6,@4,@2,@7,@8];
-    //NSArray *sourceArr = @[@7,@6,@5];
-    //NSArray *sourceArr = @[@6,@2,@3,@4,@5];
-    
+    NSArray *sourceArr = @[@8,@3,@5,@10,@1,@6,@4,@2,@7,@9];
+        
     //冒泡排序
     [BubbleSortManager startBubbleSortWithDataArray:sourceArr block:^(NSString *sortReslut) {
         NSLog(@"%@",sortReslut);
@@ -37,7 +35,7 @@
     }];
     
     //快速排序
-    [[QuickSortManager shareInstance]startQucikSortWithDataArray:sourceArr pivotIndex:LeftEle block:^(NSString *sortReslut) {
+    [[QuickSortManager shareInstance]startQucikSortWithDataArray:sourceArr pivotIndex:RightEle block:^(NSString *sortReslut) {
         NSLog(@"%@",sortReslut);
     }];
     

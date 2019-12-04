@@ -12,6 +12,7 @@
 //
 //@property(nonatomic,assign)NSInteger checkCount;
 //@property(nonatomic,assign)NSInteger exchangeCount;
+@property(nonatomic,strong)NSDate *startTime;
 
 @end
 
@@ -35,13 +36,12 @@ static QuickSortManager *manager = nil;
 
 - (void)startQucikSortWithDataArray:(NSArray *)array pivotIndex:(PivotIndex)index block:(void(^)(NSString *))block{
     NSMutableArray *arr = [array mutableCopy];
-
+    self.startTime = [NSDate date];
     [self sort:arr left:0 right:arr.count-1 pivotIndex:index block:block];
 }
 
 - (void)sort:(NSMutableArray *)arr left:(int)left right:(int)right pivotIndex:(PivotIndex)index block:(void(^)(NSString *))block{
-    //NSMutableArray *arr = [array mutableCopy];
-    
+
     HHLog(@"原来数组：%@",[arr formatOutPut]);
     
     if (left >= right) {
@@ -56,7 +56,16 @@ static QuickSortManager *manager = nil;
             }else{
                 pivotDesc = @"中间元素";
             }
-            block([NSString stringWithFormat:@"快速排序结束:%@，共比较%ld次，共进行%ld次交换，本次排序基准值选取%@，",[arr formatOutPut],self.checkCount,self.exchangeCount,pivotDesc]);
+            
+            block([NSString stringWithFormat:
+                   @"快速排序结束，总计%ld个元素，耗时%f，共比较%ld次，共进行%ld次交换，本次排序基准值选取%@，",
+                   arr.count,
+                   -[self.startTime timeIntervalSinceNow],
+                   self.checkCount,
+                   self.exchangeCount,
+                   pivotDesc]);
+            
+            //block([NSString stringWithFormat:@"快速排序结束:%@，共比较%ld次，共进行%ld次交换，本次排序基准值选取%@，",[arr formatOutPut],self.checkCount,self.exchangeCount,pivotDesc]);
         }
         return;
     }
@@ -143,7 +152,7 @@ static QuickSortManager *manager = nil;
     [self sort:arr left:i+1 right:right pivotIndex:index block:block];
 }
 
-
+/*
 + (void)qucickSort:(NSMutableArray *)m low:(int)low high:(int)high{
 
     //HHLog(@"原数组：%@",[m formatOutPut]);
@@ -182,6 +191,6 @@ static QuickSortManager *manager = nil;
     m[i] = key;
     [self qucickSort:m low:low high:i-1];
     [self qucickSort:m low:i+1 high:high];
-}
+}*/
 
 @end

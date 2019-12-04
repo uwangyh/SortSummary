@@ -16,7 +16,9 @@
     
     NSMutableArray *arr = [array mutableCopy];
 
-    //HHLog(@"排序前：%@",[arr formatOutPut]);
+    HHLog(@"排序前：%@",[arr formatOutPut]);
+    
+    NSDate *startTime = [NSDate date];
 
     //交换次数
     NSInteger exchangeCount = 0;
@@ -33,20 +35,20 @@
                 
                 [arr exchangeObjectAtIndex:j withObjectAtIndex:j+1];
                 
-                //HHLog(@"%@>%@成立，进行交换",mutableArray[j],mutableArray[j+1]);
+                HHLog(@"%@>%@成立，进行交换",mutableArray[j],mutableArray[j+1]);
                 exchangeCount++;
     
-                //HHLog(@"排序中：%@\n",[mutableArray formatOutPut]);
+                HHLog(@"排序中：%@\n",[mutableArray formatOutPut]);
                 haveChange = true;
             }else{
-                //HHLog(@"%@>%@不成立，本次不交换\n",mutableArray[j],mutableArray[j+1]);
+                HHLog(@"%@>%@不成立，本次不交换\n",mutableArray[j],mutableArray[j+1]);
             }
             checkCount++;
             if (j == array.count - 2 - i) {
                 if (haveChange) {
-                    //HHLog(@"----------本趟结束，最大的数值已放在数组最后-------\n");
+                    HHLog(@"----------本趟结束，最大的数值已放在数组最后-------\n");
                 }else{
-                    //HHLog(@"----------***********本趟结束，且本趟没有进行交换，数组已经有序，退出排序***********-------\n\n");
+                    HHLog(@"----------***********本趟结束，且本趟没有进行交换，数组已经有序，退出排序***********-------\n\n");
                 }
             }
         }
@@ -57,7 +59,8 @@
 
     //HHLog(@"排序后：%@",[arr formatOutPut]);
     //HHLog(@"冒泡排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
-    block([NSString stringWithFormat:@"冒泡排序结束:%@，共比较%ld次，共进行%ld次交换",[arr formatOutPut],checkCount,exchangeCount]);
+    //block([NSString stringWithFormat:@"冒泡排序结束:%@，共比较%ld次，共进行%ld次交换",[arr formatOutPut],checkCount,exchangeCount]);
+    block([NSString stringWithFormat:@"冒泡排序结束，总计%ld个元素，耗时%f，共比较%ld次，共进行%ld次交换",arr.count,-[startTime timeIntervalSinceNow],checkCount,exchangeCount]);
 }
 
 @end

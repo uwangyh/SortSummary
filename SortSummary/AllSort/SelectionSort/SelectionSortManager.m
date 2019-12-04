@@ -13,7 +13,9 @@
 + (void)startSelectionSortWithDataArray:(NSArray *)array block:(void(^)(NSString *))block{
     NSMutableArray *arr = [array mutableCopy];
 
-//    HHLog(@"排序前：%@",[arr formatOutPut]);
+    HHLog(@"排序前：%@",[arr formatOutPut]);
+    
+    NSDate *startTime = [NSDate date];
     
     //比较次数
     NSInteger checkCount = 0;
@@ -34,10 +36,11 @@
         }
     }
     
-    //HHLog(@"排序后：%@",[arr formatOutPut]);
-    //HHLog(@"选择排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
+    HHLog(@"排序后：%@",[arr formatOutPut]);
+    HHLog(@"选择排序结束，一共比较%ld次，共进行%ld次交换",checkCount,exchangeCount);
     
-    block([NSString stringWithFormat:@"选择排序结束:%@，共比较%ld次，共进行%ld次交换",[arr formatOutPut],checkCount,exchangeCount]);
+    //block([NSString stringWithFormat:@"选择排序结束:%@，共比较%ld次，共进行%ld次交换",[arr formatOutPut],checkCount,exchangeCount]);
+    block([NSString stringWithFormat:@"选择排序结束，总计%ld个元素，耗时%f，共比较%ld次，共进行%ld次交换",arr.count,-[startTime timeIntervalSinceNow],checkCount,exchangeCount]);
 }
 
 @end
