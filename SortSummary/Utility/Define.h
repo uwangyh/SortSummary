@@ -17,7 +17,7 @@
 
 #import "QuickSortManager.h"
 
-//
+//可以在这里设置排序过程详细log的开关
 #if 0
 #   define HHLog(fmt, ...) {NSLog((fmt),##__VA_ARGS__);}
 /*

@@ -82,6 +82,7 @@ static QuickSortManager *manager = nil;
     
     int pivot = [arr[pivotIndex]intValue]; //取左边第一个元素为基准值
     HHLog(@"本次排序基准值索引%d--值%d，排序范围%d~%d",pivotIndex,pivot,left,right);
+    //标记左边哨兵是否行动过
     BOOL isLeftMoved = false;
     //开始遍历 从右边的哨兵j开始
     for (; j > i; j--) {
