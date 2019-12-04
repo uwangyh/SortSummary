@@ -35,7 +35,7 @@
     }];
     
     //快速排序
-    [[QuickSortManager shareInstance]startQucikSortWithDataArray:sourceArr pivotIndex:RightEle block:^(NSString *sortReslut) {
+    [[QuickSortManager shareInstance]startQucikSortWithDataArray:sourceArr pivotIndex:MiddleEle block:^(NSString *sortReslut) {
         NSLog(@"%@",sortReslut);
     }];
     

@@ -9,9 +9,9 @@
 #import "QuickSortManager.h"
 
 @interface QuickSortManager()
-//
-//@property(nonatomic,assign)NSInteger checkCount;
-//@property(nonatomic,assign)NSInteger exchangeCount;
+
+@property(nonatomic,assign)NSInteger checkCount;
+@property(nonatomic,assign)NSInteger exchangeCount;
 @property(nonatomic,strong)NSDate *startTime;
 
 @end

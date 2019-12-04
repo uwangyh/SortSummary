@@ -17,8 +17,6 @@ typedef enum : NSUInteger {
 NS_ASSUME_NONNULL_BEGIN
 
 @interface QuickSortManager : NSObject
-@property(nonatomic,assign)NSInteger checkCount;
-@property(nonatomic,assign)NSInteger exchangeCount;
 
 + (instancetype)shareInstance;
 
