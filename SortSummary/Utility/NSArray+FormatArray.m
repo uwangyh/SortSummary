@@ -13,10 +13,19 @@
 
 - (NSString *)formatOutPut{
     NSMutableString *oriStr = [[NSMutableString alloc]init];
-   for (NSNumber *num in self) {
-       [oriStr appendFormat:@"%@ ", [NSString stringWithFormat:@"%@",num]];
-   }
+    for (NSNumber *num in self) {
+        [oriStr appendFormat:@"%@ ", [NSString stringWithFormat:@"%@",num]];
+    }
     return oriStr;
+}
+- (void)isLowSort:(NSString *)sortType{
+    for (NSInteger i = 0; i < self.count-1; i++) {
+        if ([[self objectAtIndex:i]intValue] > [[self objectAtIndex:i+1]intValue]) {
+            NSLog(@"\n##########\n##########\n##########\n##########\n本次%@排序出错，在第%ld个元素处\n##########\n##########\n##########\n##########",sortType,i);
+            return;
+        }
+    }
+    NSLog(@"\n##########\n##########\n本次%@排序无误\n##########\n##########",sortType);
 }
 
 @end

@@ -64,7 +64,8 @@ static QuickSortManager *manager = nil;
                    self.checkCount,
                    self.exchangeCount,
                    pivotDesc]);
-            
+            //排序结果检查
+            [arr isLowSort:@"快速"];
             //block([NSString stringWithFormat:@"快速排序结束:%@，共比较%ld次，共进行%ld次交换，本次排序基准值选取%@，",[arr formatOutPut],self.checkCount,self.exchangeCount,pivotDesc]);
         }
         return;

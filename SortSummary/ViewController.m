@@ -19,7 +19,7 @@
     //NSArray *sourceArr = @[@8,@3,@5,@10,@1,@6,@4,@2,@7,@9];
     
     //随机生成数据源
-    NSArray *sourceArr = [self getRandomSourceCount:500];
+    NSArray *sourceArr = [self getRandomSourceCount:500000];
     NSLog(@"本次排序共个%ld元素",sourceArr.count);
 
     //冒泡排序
