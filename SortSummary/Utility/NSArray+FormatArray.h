@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSArray (FormatArray)
 
 - (NSString *)formatOutPut;
+- (void)isLowSort:(NSString *)sortType;
 
 @end
 

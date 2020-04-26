@@ -47,7 +47,7 @@ static QuickSortManager *manager = nil;
     if (left >= right) {
         HHLog(@"排序结束：%@---left:%d---right:%d",[arr formatOutPut],left,right);
         if (right == arr.count-1) {
-            //HHLog(@"排序结果:%@,本次排序共进行%ld次比较，%ld次交换",[arr formatOutPut],self.checkCount,self.exchangeCount);
+            //HHLog(@"快速排序结果:%@,本次排序共进行%ld次比较，%ld次交换",[arr formatOutPut],self.checkCount,self.exchangeCount);
             NSString *pivotDesc;
             if (index == LeftEle) {
                 pivotDesc = @"第一个元素";
@@ -64,7 +64,8 @@ static QuickSortManager *manager = nil;
                    self.checkCount,
                    self.exchangeCount,
                    pivotDesc]);
-            
+            //排序结果检查
+            [arr isLowSort:@"快速"];
             //block([NSString stringWithFormat:@"快速排序结束:%@，共比较%ld次，共进行%ld次交换，本次排序基准值选取%@，",[arr formatOutPut],self.checkCount,self.exchangeCount,pivotDesc]);
         }
         return;

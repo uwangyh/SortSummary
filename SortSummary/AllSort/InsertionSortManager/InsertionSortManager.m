@@ -13,7 +13,8 @@
 + (void)startInsertionSortWithDataArray:(NSArray *)array block:(void(^)(NSString *))block{
     
     NSMutableArray *arr = [array mutableCopy];
-
+    
+    HHLog(@"插入排序开始");
     HHLog(@"排序前：%@",[arr formatOutPut]);
     
     NSDate *startTime = [NSDate date];

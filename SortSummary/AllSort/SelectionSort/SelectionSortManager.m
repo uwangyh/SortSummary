@@ -12,9 +12,9 @@
 
 + (void)startSelectionSortWithDataArray:(NSArray *)array block:(void(^)(NSString *))block{
     NSMutableArray *arr = [array mutableCopy];
-
-    HHLog(@"排序前：%@",[arr formatOutPut]);
     
+    HHLog(@"选择排序开始");
+    HHLog(@"排序前：%@",[arr formatOutPut]);
     NSDate *startTime = [NSDate date];
     
     //比较次数

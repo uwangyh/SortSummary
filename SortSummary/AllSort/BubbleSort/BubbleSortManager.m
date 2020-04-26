@@ -15,7 +15,7 @@
 + (void)startBubbleSortWithDataArray:(NSArray *)array block:(void(^)(NSString *))block{
     
     NSMutableArray *arr = [array mutableCopy];
-
+    HHLog(@"冒泡排序开始");
     HHLog(@"排序前：%@",[arr formatOutPut]);
     
     NSDate *startTime = [NSDate date];

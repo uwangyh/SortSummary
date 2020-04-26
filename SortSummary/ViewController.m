@@ -7,30 +7,21 @@
 //
 
 #import "ViewController.h"
-#import <objc/runtime.h>
-#import "Person.h"
-
 
 @interface ViewController ()
-{
-    
-}
-@property(nonatomic,assign)NSInteger testValue;
-@property(nonatomic,copy)NSString *testStr;
-
-@property(nonatomic,strong)Person *human;
 
 @end
 
 @implementation ViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-        
+    //NSArray *sourceArr = @[@8,@3,@5,@10,@1,@6,@4,@2,@7,@9];
     
-    NSArray *sourceArr = @[@8,@3,@5,@10,@1,@6,@4,@2,@7,@9];
-        
+    //随机生成数据源
+    NSArray *sourceArr = [self getRandomSourceCount:500000];
+    NSLog(@"本次排序共个%ld元素",sourceArr.count);
+
     //冒泡排序
     [BubbleSortManager startBubbleSortWithDataArray:sourceArr block:^(NSString *sortReslut) {
         NSLog(@"%@",sortReslut);
@@ -53,5 +44,14 @@
     
 }
 
+
+- (NSArray *)getRandomSourceCount:(int)count{
+    NSMutableArray *soucrArr = [[NSMutableArray alloc]init];
+    for (int i = 0; i < count; i++) {
+        int num = arc4random_uniform(10000000);
+        [soucrArr addObject:[NSNumber numberWithInt:num]];
+    }
+    return soucrArr;
+}
 
 @end
