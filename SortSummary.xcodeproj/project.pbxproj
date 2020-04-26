@@ -24,6 +24,7 @@
 		48C63006239795BE0063E900 /* InsertionSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48C63005239795BE0063E900 /* InsertionSort.gif */; };
 		48C63008239795E50063E900 /* SelectionSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48C63007239795E50063E900 /* SelectionSort.gif */; };
 		48C6300A2397960C0063E900 /* BubbleSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48C630092397960C0063E900 /* BubbleSort.gif */; };
+		5C6CA22F2451D466008C9D19 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6CA22E2451D466008C9D19 /* Person.m */; };
 		5CB4B53223901671005C0811 /* InsertionSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4B53123901671005C0811 /* InsertionSortManager.m */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,8 @@
 		48C63005239795BE0063E900 /* InsertionSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = InsertionSort.gif; sourceTree = "<group>"; };
 		48C63007239795E50063E900 /* SelectionSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SelectionSort.gif; sourceTree = "<group>"; };
 		48C630092397960C0063E900 /* BubbleSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BubbleSort.gif; sourceTree = "<group>"; };
+		5C6CA22D2451D466008C9D19 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5C6CA22E2451D466008C9D19 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		5CB4B53023901671005C0811 /* InsertionSortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsertionSortManager.h; sourceTree = "<group>"; };
 		5CB4B53123901671005C0811 /* InsertionSortManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsertionSortManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +140,8 @@
 				480D3C99238F965600A8E97B /* SceneDelegate.m */,
 				480D3C9B238F965600A8E97B /* ViewController.h */,
 				480D3C9C238F965600A8E97B /* ViewController.m */,
+				5C6CA22D2451D466008C9D19 /* Person.h */,
+				5C6CA22E2451D466008C9D19 /* Person.m */,
 				480D3C9E238F965600A8E97B /* Main.storyboard */,
 				480D3CA1238F965800A8E97B /* Assets.xcassets */,
 				480D3CA3238F965800A8E97B /* LaunchScreen.storyboard */,
@@ -362,6 +367,7 @@
 			files = (
 				480D3CD5238FB90800A8E97B /* SelectionSortManager.m in Sources */,
 				480D3C9D238F965600A8E97B /* ViewController.m in Sources */,
+				5C6CA22F2451D466008C9D19 /* Person.m in Sources */,
 				480D3C97238F965600A8E97B /* AppDelegate.m in Sources */,
 				48C6300423978D220063E900 /* QuickSortManager.m in Sources */,
 				480D3CA8238F965800A8E97B /* main.m in Sources */,

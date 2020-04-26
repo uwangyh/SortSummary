@@ -7,16 +7,28 @@
 //
 
 #import "ViewController.h"
+#import <objc/runtime.h>
+#import "Person.h"
 
 
 @interface ViewController ()
+{
+    
+}
+@property(nonatomic,assign)NSInteger testValue;
+@property(nonatomic,copy)NSString *testStr;
+
+@property(nonatomic,strong)Person *human;
 
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+        
+    
     NSArray *sourceArr = @[@8,@3,@5,@10,@1,@6,@4,@2,@7,@9];
         
     //冒泡排序
